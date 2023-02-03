@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;900&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/36a000fd02.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="style.css">
+    <title>Portfolio</title>
+</head>
+<body>
+    <div class="container">
+        <nav>
+            <div class="logo"><a href="index.html">sithu <b> . </b></a></div>
+            <ul class="navItems">
+                <li><a href="index.html">HOME</a></li>
+                <li><a href="about.html">ABOUT</a></li>
+                <li><a href="portfolio.html">PORTFOLIO</a></li>
+                <li><a href="contact.html">CONTACT</a></li>
+            </ul>
+            <div class="links">
+                <a href="https://www.facebook.com/sithuthilakawardhana"><i class="fa-brands fa-facebook"></i></a>
+                <a href="https://github.com/SithuThilakawardhana"><i class="fa-brands fa-github"></i></a>
+                <a href="https://www.instagram.com/sithu_thilakawardhana/"><i class="fa-brands fa-instagram"></i></a>
+                <a href="www.linkedin.com/in/sithumini-thilakawardhana-3844bb25b"><i class="fa-brands fa-linkedin"></i></a>
+            </div>
+        </nav>
+
+<!-- --------------------------------------------------------------------------------------- -->
+
+        <div class="wrapper" id="portfolio">
+            <div class="main-div">
+                <h1>My Technical Skills</h1>
+                <div class="tab-titles">
+                    <p class="tab-links active-link" onclick="opentab('skills')">Client-side</p>
+                    <p class="tab-links" onclick="opentab('experience')">server-side</p>
+                    <p class="tab-links" onclick="opentab('education')">Database</p>
+                    <p class="tab-links" onclick="opentab('other')">Other-tools</p>
+                </div>
+                <div class="tab-contents active-tab" id="skills">
+                    <ul>
+                        <li><span><i class="fa-brands fa-html5"></i></span>&nbsp;&nbsp;HTML</li>
+                        <li><span><i class="fa-brands fa-css3-alt"></i></span>&nbsp;&nbsp;CSS</li>
+                        <li><span><i class="fa-brands fa-bootstrap"></i></span>&nbsp;&nbsp;BOOTSTRAP</li>
+                        <li><span><i class="fa-brands fa-react"></i></span>&nbsp;&nbsp;Reactjs</li>
+                    </ul>
+                </div>
+                <div class="tab-contents" id="experience">
+                    <ul>
+                        <li><span><i class="fa-brands fa-php"></i></span>&nbsp;&nbsp;PHP</li>
+                        <li><span><i class="fa-brands fa-node"></i></span>&nbsp;&nbsp;nodejs</li>
+                        <li><span><i class="fa-brands fa-js"></i></span>&nbsp;&nbsp;javascript</li>
+                    </ul>
+                </div>
+                <div class="tab-contents" id="education">
+                    <ul>
+                        <li><span><i class="fa-solid fa-database"></i></span>&nbsp;&nbsp;MySQL</li>
+                        <li><span><i class="fa-solid fa-database"></i></span>&nbsp;&nbsp;MongoDB</li>
+                    </ul>
+                </div>
+                <div class="tab-contents" id="other">
+                    <ul>
+                        <li><span><i class="fa-brands fa-figma"></i></span>&nbsp;&nbsp;Figma</li>
+                        <li><span><i class="fa-brands fa-android"></i></span>&nbsp;&nbsp;Android Studio</li>
+                        <li><span><i class="fa-brands fa-microsoft"></i></i></span>&nbsp;&nbsp;Ms Office(Word, Excel, Powerpoint)</li>
+                    </ul>
+                </div>
+            </div>
+            
+        </div>
+        <div class="copyright">
+            <p>copyright © Sithu <i class="fas fa-heart"></i></p>
+        </div>
+        
+    </div>
+    
+    
+
+    <script>
+        var tablinks = document.getElementsByClassName("tab-links");
+        var tabcontents = document.getElementsByClassName("tab-contents");
+
+        function opentab(tabname){
+            for(tablink of tablinks){
+                tablink.classList.remove("active-link");
+            }
+            for(tabcontent of tabcontents){
+                tabcontent.classList.remove("active-tab");
+            }
+            event.currentTarget.classList.add("active-link");
+            document.getElementById(tabname).classList.add("active-tab");
+        }
+    </script>
+
+</body>
+</html>

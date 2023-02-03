@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;900&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/36a000fd02.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="style.css">
+    <title>About Me</title>
+
+</head>
+<body>
+
+<!-- -------------------------------------------------------------------------------------------------------- -->
+<!-- ABOUT -->
+
+    <div class="container">    
+    <nav>
+        <div class="logo"><a href="index.html">sithu <b> . </b></a></div>
+        <ul class="navItems">
+            <li><a href="index.html">HOME</a></li>
+            <li><a href="about.html">ABOUT</a></li>
+            <li><a href="portfolio.html">PORTFOLIO</a></li>
+            <li><a href="contact.html">CONTACT</a></li>
+        </ul>
+        <div class="links">
+            <a href="https://www.facebook.com/sithuthilakawardhana"><i class="fa-brands fa-facebook"></i></a>
+            <a href="https://github.com/SithuThilakawardhana"><i class="fa-brands fa-github"></i></a>
+            <a href="https://www.instagram.com/sithu_thilakawardhana/"><i class="fa-brands fa-instagram"></i></a>
+            <a href="www.linkedin.com/in/sithumini-thilakawardhana-3844bb25b"><i class="fa-brands fa-linkedin"></i></a>
+        </div>
+    </nav>
+        <div class="wrapper">
+            <div class="col col-1">
+                <div class="col-1-title">
+                    <h1>ABOUT ME</h1>
+                    <p> &nbsp; &nbsp; &nbsp;&nbsp; Third year Information Technology undergraduate student at Sri Lanka Institute of Information Technology. 
+                        Have just completed first two years and seeking to apply that knowledge in practice. Looking to make a strong 
+                        start to my career in IT industry by making an active contribution as an intern. Highly motivated, productive and 
+                        customer focused team player with strong communication, interpersonal, organizational, time management, 
+                        analytical and solution reinted skills.</p>
+                </div>
+            </div>
+            <div class="col col-2">
+                <div class="tab-titles">
+                    <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                    <p class="tab-links" onclick="opentab('experience')">Experience</p>
+                    <p class="tab-links" onclick="opentab('education')">Education</p>
+                </div>
+                <div class="tab-contents active-tab" id="skills">
+                    <ul>
+                        <li><span>UI/UX</span><br>Designing Web/App interfaces</li>
+                        <li><span>Web Development</span><br>Web/App Development</li>
+                        <li><span>App Development</span><br>Designing Android Apps</li>
+                    </ul>
+                </div>
+                <div class="tab-contents" id="experience">
+                    
+                </div>
+                <div class="tab-contents" id="education">
+                    <ul>
+                        <li><span>2020 - Current</span><br>Sri Lanka Institute of Information Technology</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        var tablinks = document.getElementsByClassName("tab-links");
+        var tabcontents = document.getElementsByClassName("tab-contents");
+
+        function opentab(tabname){
+            for(tablink of tablinks){
+                tablink.classList.remove("active-link");
+            }
+            for(tabcontent of tabcontents){
+                tabcontent.classList.remove("active-tab");
+            }
+            event.currentTarget.classList.add("active-link");
+            document.getElementById(tabname).classList.add("active-tab");
+        }
+    </script>
+
+    <div class="copyright">
+    <p>copyright © Sithu <i class="fas fa-heart"></i></p>
+    </div>
+</body>
+</html>
